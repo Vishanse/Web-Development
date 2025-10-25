@@ -1,0 +1,108 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.blog-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 50px;
+}
+
+/* Stair Container */
+.stair-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  position: relative;
+}
+
+/* Blog Card */
+.blog-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 800px;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Images */
+.blog-card img {
+  width: 260px;
+  height: 160px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.blog-content h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.read-more {
+  text-decoration: none;
+  color: #2962ff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: #0039cb;
+}
+
+/* Stair Effect (desktop only) */
+.step1 { margin-left: 0; }
+.step2 { margin-left: 60px; }
+.step3 { margin-left: 120px; }
+.step4 { margin-left: 180px; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .stair-container {
+    align-items: center;
+  }
+
+  .blog-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .blog-card img {
+    width: 100%;
+    height: 200px;
+  }
+
+  /* Remove stair offset on mobile */
+  .step1, .step2, .step3, .step4 {
+    margin-left: 0;
+  }
+}
