@@ -1,83 +1,73 @@
-/* General body styling */
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-/* Article container */
-article {
+/* Content area styling */
+.article‑container {
   max-width: 800px;
   margin: 2rem auto;
-  padding: 2rem;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 2rem 1.5rem;
+  background‑color: #ffffff;
+  border: 1px solid #e6e6e6;
+  border‑radius: 8px;
+  box‑shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font‑family: 'Helvetica Neue', Helvetica, Arial, sans‑serif;
+  line‑height: 1.7;
+  color: #333333;
 }
 
-/* Headings */
-h1 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-  text-align: center;
-  color: #222;
+.article‑container h1 {
+  font‑size: 2.2rem;
+  margin‑bottom: 1.2rem;
+  color: #222222;
 }
 
-h2 {
-  font-size: 1.5rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: #444;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 0.3rem;
+.article‑container h2 {
+  font‑size: 1.6rem;
+  margin‑top: 2rem;
+  margin‑bottom: 1rem;
+  color: #444444;
+  border‑bottom: 2px solid #f0f0f0;
+  padding‑bottom: 0.3rem;
 }
 
-/* Paragraphs and links */
-p {
-  margin-bottom: 1rem;
+.article‑container p {
+  margin‑bottom: 1.2rem;
 }
 
-a {
+.article‑container a {
   color: #0066cc;
-  text-decoration: none;
+  text‑decoration: none;
+}
+.article‑container a:hover {
+  text‑decoration: underline;
 }
 
-a:hover {
-  text-decoration: underline;
+.article‑container ul {
+  margin‑left: 1.5rem;
+  margin‑bottom: 1.5rem;
+}
+.article‑container li {
+  margin‑bottom: 0.6rem;
 }
 
-/* Lists */
-ul {
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-/* Code blocks */
-pre {
-  background-color: #f4f4f4;
+.article‑container pre {
+  background‑color: #f8f8f8;
   padding: 1rem;
-  border-radius: 5px;
-  overflow-x: auto;
-  margin-bottom: 1rem;
+  border: 1px solid #eaeaea;
+  border‑radius: 4px;
+  overflow‑x: auto;
+  margin‑bottom: 1.5rem;
 }
 
-code {
-  font-family: 'Courier New', monospace;
-  background-color: #f4f4f4;
+.article‑container code {
+  font‑family: 'Courier New', Courier, monospace;
+  background‑color: #f4f4f4;
   padding: 2px 5px;
-  border-radius: 3px;
+  border‑radius: 3px;
 }
 
-/* Screenshots or notes */
-em {
-  color: #888;
+.article‑container em {
   display: block;
-  margin: 0.5rem 0 1rem 0;
+  margin: 0.8rem 0;
+  color: #777777;
 }
+
+ 
+
