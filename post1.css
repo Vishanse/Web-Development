@@ -23,9 +23,6 @@ section.step {
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 
-section.step.reverse {
-  flex-direction: row-reverse;
-}
 
 .text {
   flex: 1;
@@ -43,43 +40,6 @@ section.step.reverse {
   margin-bottom: 20px;
 }
 
-.time {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 25px;
-}
-
-.icon {
-  font-size: 28px;
-  color: #4b6ef5;
-}
-
-.time h4 {
-  font-size: 14px;
-  color: #000;
-}
-
-.time p {
-  font-size: 15px;
-  color: #555;
-}
-
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #eef2ff;
-  color: #4b6ef5;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: 0.3s;
-  font-weight: 500;
-}
-
-.btn:hover {
-  background: #4b6ef5;
-  color: white;
-}
 
 .image {
   flex: 1;
