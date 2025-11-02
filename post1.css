@@ -117,7 +117,7 @@ section.tutorial p strong::before {
 }
 
 /* === Responsive === */
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   section.tutorial {
     width: 95%;
     padding: 1.5rem;
