@@ -121,7 +121,7 @@ section.tutorial p strong::before {
 @media (max-width: 1500px) {
   section.tutorial {
     width: 95%;
-    padding: 1.5rem;
+    padding: 2rem 3rem;
   }
 
   section.tutorial h1 {
