@@ -1,7 +1,8 @@
-section.tutorial{
-  display:block;
-  padding: 2rem 3rem;}
-
+section.tutorial {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
 
 
