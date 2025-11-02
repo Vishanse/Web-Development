@@ -44,3 +44,73 @@
       <a href="#" class="cta-btn">Let's Do It →</a>
     </div>
   </section>
+
+
+
+
+
+
+<!-- === SITEMAP SECTION === -->
+<section class="tutorial">
+  <h1>How to Add a Sitemap to Your GitHub Pages Site</h1>
+
+  <p><strong>Step 1:</strong> Create a <code>sitemap.xml</code> file in your repository's root folder (where <code>index.html</code> is).</p>
+
+  <p><strong>Step 2:</strong> Add your website URLs inside it using this format:</p>
+
+  <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://yourusername.github.io/&lt;/loc&gt;
+    &lt;lastmod&gt;2025-11-01&lt;/lastmod&gt;
+    &lt;changefreq&gt;monthly&lt;/changefreq&gt;
+    &lt;priority&gt;1.0&lt;/priority&gt;
+  &lt;/url&gt;
+  &lt;url&gt;
+    &lt;loc&gt;https://yourusername.github.io/about.html&lt;/loc&gt;
+    &lt;changefreq&gt;monthly&lt;/changefreq&gt;
+  &lt;/url&gt;
+&lt;/urlset&gt;
+</code></pre>
+
+  <p><strong>Step 3:</strong> Save and push the file to your GitHub repository.</p>
+
+  <p><strong>Step 4:</strong> To verify it’s working, open:
+  <a href="https://yourusername.github.io/sitemap.xml" target="_blank">https://yourusername.github.io/sitemap.xml</a></p>
+
+  <p><em>Screenshot placeholder: Your sitemap XML page visible in browser</em></p>
+
+  <p><strong>Tip:</strong> You can submit this sitemap to Google Search Console for better indexing.</p>
+</section>
+
+<!-- === GOOGLE ANALYTICS SECTION === -->
+<section class="tutorial">
+  <h1>How to Add Google Analytics to Your GitHub Pages Site</h1>
+
+  <p><strong>Step 1:</strong> Go to <a href="https://analytics.google.com" target="_blank">Google Analytics</a> and create a new property for your website.</p>
+
+  <p><strong>Step 2:</strong> Copy your unique Measurement ID (it looks like <code>G-XXXXXXXXXX</code>).</p>
+
+  <p><strong>Step 3:</strong> In your <code>&lt;head&gt;</code> tag of every HTML page (or in your template), paste this code before the closing <code>&lt;/head&gt;</code> tag:</p>
+
+  <pre><code>&lt;!-- Google tag (gtag.js) --&gt;
+&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+&lt;/script&gt;
+</code></pre>
+
+  <p><strong>Step 4:</strong> Replace <code>G-XXXXXXXXXX</code> with your actual Google Analytics Measurement ID.</p>
+
+  <p><strong>Step 5:</strong> Push the changes to GitHub Pages and verify your data in Google Analytics after 24–48 hours.</p>
+
+  <p><em>Screenshot placeholder: Google Analytics dashboard showing your site traffic</em></p>
+
+  <p><strong>Tip:</strong> For faster updates, keep your analytics script in a shared header file if you use includes.</p>
+</section>
+
+
+  
