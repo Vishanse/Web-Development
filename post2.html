@@ -93,63 +93,60 @@
 
 
 
-
-<!-- Leave A Comment Section -->
+<!-- Comment Section -->
 <section class="comment-section">
-  <h3>Leave A Comment</h3>
+  <h3>Leave a Comment</h3>
   <p>Your email address will not be published. Required fields are marked *</p>
 
-  <form id="commentForm">
-    <textarea id="commentText" placeholder="Type here..." required></textarea>
-
+  <!-- Custom Form -->
+  <form id="customCommentForm">
     <div class="comment-row">
-      <input type="text" id="name" placeholder="Name*" required>
-      <input type="email" id="email" placeholder="Email*" required>
-      <input type="url" id="website" placeholder="Website">
+      <input type="text" id="firstName" placeholder="First Name*" required>
+      <input type="text" id="lastName" placeholder="Last Name*" required>
     </div>
-
-    <div class="checkbox">
-      <input type="checkbox" id="saveInfo">
-      <label for="saveInfo">
-        Save my name, email, and website in this browser for the next time I comment.
-      </label>
-    </div>
-
+    <input type="email" id="email" placeholder="Email*" required>
+    <textarea id="commentText" placeholder="Type your comment..." required></textarea>
     <button type="submit">Post Comment »</button>
   </form>
 
-  <div id="comments" class="comment-display"></div>
+  <!-- Commento Embed -->
+  <div id="commento"></div>
 </section>
 
-<!-- Comment Section Script -->
+  <script defer src="https://cdn.commento.io/js/commento.js"></script>
 <script>
-const form = document.getElementById('commentForm');
-const commentsDiv = document.getElementById('comments');
+const form = document.getElementById('customCommentForm');
 
 form.addEventListener('submit', function(e) {
   e.preventDefault();
 
-  const name = document.getElementById('name').value.trim();
+  const firstName = document.getElementById('firstName').value.trim();
+  const lastName = document.getElementById('lastName').value.trim();
+  const email = document.getElementById('email').value.trim();
   const commentText = document.getElementById('commentText').value.trim();
 
-  if (!name || !commentText) return;
+  if (!firstName || !lastName || !email || !commentText) return;
 
-  // Create comment container
-  const commentEl = document.createElement('div');
-  commentEl.classList.add('comment');
-  commentEl.innerHTML = `<strong>${name}</strong><p>${commentText}</p>`;
+  // Combine First + Last Name for Commento
+  const fullName = firstName + ' ' + lastName;
 
-  // Create reply
-  const replyEl = document.createElement('div');
-  replyEl.classList.add('reply');
-  replyEl.innerHTML = `<strong>Admin Reply:</strong> Thanks for your comment, ${name}! Your feedback is appreciated.`;
+  // Pre-fill Commento fields
+  const commentoFrame = document.querySelector('#commento iframe');
 
-  commentEl.appendChild(replyEl);
-  commentsDiv.prepend(commentEl); // newest first
+  if (commentoFrame) {
+    commentoFrame.contentWindow.postMessage({
+      type: 'commento',
+      name: fullName,
+      email: email,
+      comment: commentText
+    }, '*');
+  }
 
+  // Reset form
   form.reset();
+
+  // Scroll to Commento widget
+  document.getElementById('commento').scrollIntoView({ behavior: 'smooth' });
 });
 </script>
 
-
-  
