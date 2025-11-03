@@ -16,7 +16,7 @@
   color: #555;
 }
 
-textarea, input[type="text"], input[type="email"], input[type="url"] {
+textarea, input[type="text"], input[type="email"] {
   width: 100%;
   padding: 10px;
   margin-top: 8px;
@@ -36,18 +36,6 @@ textarea, input[type="text"], input[type="email"], input[type="url"] {
   flex: 1;
 }
 
-.checkbox {
-  display: flex;
-  align-items: center;
-  font-size: 0.9rem;
-  color: #555;
-  margin: 10px 0;
-}
-
-.checkbox input {
-  margin-right: 8px;
-}
-
 button {
   background-color: #3942ff;
   color: #fff;
@@ -56,35 +44,10 @@ button {
   font-size: 0.95rem;
   cursor: pointer;
   border-radius: 3px;
+  margin-top: 10px;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #2734e0;
-}
-
-.comment-display {
-  margin-top: 30px;
-  border-top: 1px solid #ddd;
-  padding-top: 20px;
-}
-
-.comment {
-  background: #f9f9f9;
-  border: 1px solid #eee;
-  padding: 15px;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
-.reply {
-  margin-left: 30px;
-  background: #eef0ff;
-  border: 1px solid #d8dbff;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.comment strong {
-  color: #222;
 }
