@@ -90,4 +90,66 @@
 </section>
 
 
+
+
+
+
+<!-- Leave A Comment Section -->
+<section class="comment-section">
+  <h3>Leave A Comment</h3>
+  <p>Your email address will not be published. Required fields are marked *</p>
+
+  <form id="commentForm">
+    <textarea id="commentText" placeholder="Type here..." required></textarea>
+
+    <div class="comment-row">
+      <input type="text" id="name" placeholder="Name*" required>
+      <input type="email" id="email" placeholder="Email*" required>
+      <input type="url" id="website" placeholder="Website">
+    </div>
+
+    <div class="checkbox">
+      <input type="checkbox" id="saveInfo">
+      <label for="saveInfo">
+        Save my name, email, and website in this browser for the next time I comment.
+      </label>
+    </div>
+
+    <button type="submit">Post Comment »</button>
+  </form>
+
+  <div id="comments" class="comment-display"></div>
+</section>
+
+<!-- Comment Section Script -->
+<script>
+const form = document.getElementById('commentForm');
+const commentsDiv = document.getElementById('comments');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const commentText = document.getElementById('commentText').value.trim();
+
+  if (!name || !commentText) return;
+
+  // Create comment container
+  const commentEl = document.createElement('div');
+  commentEl.classList.add('comment');
+  commentEl.innerHTML = `<strong>${name}</strong><p>${commentText}</p>`;
+
+  // Create reply
+  const replyEl = document.createElement('div');
+  replyEl.classList.add('reply');
+  replyEl.innerHTML = `<strong>Admin Reply:</strong> Thanks for your comment, ${name}! Your feedback is appreciated.`;
+
+  commentEl.appendChild(replyEl);
+  commentsDiv.prepend(commentEl); // newest first
+
+  form.reset();
+});
+</script>
+
+
   
