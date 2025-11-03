@@ -1,0 +1,90 @@
+.comment-section {
+  max-width: 700px;
+  margin: 40px auto;
+  font-family: "Inter", Arial, sans-serif;
+  color: #222;
+}
+
+.comment-section h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.comment-section p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+textarea, input[type="text"], input[type="email"], input[type="url"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  font-size: 0.95rem;
+  border-radius: 3px;
+}
+
+.comment-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.comment-row input {
+  flex: 1;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+.checkbox input {
+  margin-right: 8px;
+}
+
+button {
+  background-color: #3942ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2734e0;
+}
+
+.comment-display {
+  margin-top: 30px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.comment {
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.reply {
+  margin-left: 30px;
+  background: #eef0ff;
+  border: 1px solid #d8dbff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.comment strong {
+  color: #222;
+}
