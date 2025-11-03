@@ -92,3 +92,67 @@
 
   <p>💡 <strong>Tip:</strong> Formspree is ideal for static websites — it’s fast, secure, and doesn’t require any server-side code to handle form submissions.</p>
 </section>
+
+
+
+
+
+
+
+
+  <!-- Comment Section -->
+<section class="comment-section">
+  <h3>Leave a Comment</h3>
+  <p>Your email address will not be published. Required fields are marked *</p>
+
+  <!-- Custom Form -->
+  <form id="customCommentForm">
+    <div class="comment-row">
+      <input type="text" id="firstName" placeholder="First Name*" required>
+      <input type="text" id="lastName" placeholder="Last Name*" required>
+    </div>
+    <input type="email" id="email" placeholder="Email*" required>
+    <textarea id="commentText" placeholder="Type your comment..." required></textarea>
+    <button type="submit">Post Comment »</button>
+  </form>
+
+  <!-- Commento Embed -->
+  <div id="commento"></div>
+</section>
+
+  <script defer src="https://cdn.commento.io/js/commento.js"></script>
+<script>
+const form = document.getElementById('customCommentForm');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const firstName = document.getElementById('firstName').value.trim();
+  const lastName = document.getElementById('lastName').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const commentText = document.getElementById('commentText').value.trim();
+
+  if (!firstName || !lastName || !email || !commentText) return;
+
+  // Combine First + Last Name for Commento
+  const fullName = firstName + ' ' + lastName;
+
+  // Pre-fill Commento fields
+  const commentoFrame = document.querySelector('#commento iframe');
+
+  if (commentoFrame) {
+    commentoFrame.contentWindow.postMessage({
+      type: 'commento',
+      name: fullName,
+      email: email,
+      comment: commentText
+    }, '*');
+  }
+
+  // Reset form
+  form.reset();
+
+  // Scroll to Commento widget
+  document.getElementById('commento').scrollIntoView({ behavior: 'smooth' });
+});
+</script>
