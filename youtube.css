@@ -1,0 +1,11 @@
+.video-tutorial {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.video-tutorial iframe {
+  width: 90%;
+  max-width: 700px;
+  height: 400px;
+  border-radius: 8px;
+}
