@@ -65,27 +65,29 @@ section.step.reverse {
   color: #555;
 }
 
+
+
+
+
+
+
 .btn {
   display: inline-block;
-  padding: 10px 20px;
-  background: #eef2ff;
-  color: #4b6ef5;
-  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
   text-decoration: none;
-  transition: 0.3s;
-  font-weight: 500;
+  color: #ffffff;              /* White text */
+  background-color: #007bff;   /* High-contrast blue */
+  border-radius: 6px;
+  transition: background-color 0.3s, box-shadow 0.3s;
 }
-
-
-
-
 
 .btn:hover,
 .btn:focus {
-  background-color: #0056b3; /* darker blue */
-  color: #ffffff;
-  outline: none; /* optional: keep visible focus */
-  box-shadow: 0 0 0 3px rgba(0,123,255,0.5);
+  background-color: #0056b3;   /* Darker blue on hover/focus */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* visible focus outline */
+  outline: none;
 }
 
 
