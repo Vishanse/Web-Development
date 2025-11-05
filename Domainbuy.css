@@ -2,7 +2,7 @@
   text-align: center;        /* Center the text */
   max-width: 600px;          /* Limit the width */
   margin: 0 auto;            /* Center the block horizontally */
-  line-height: 1.6;          /* Better readability */
+  line-height: 1.9;          /* Better readability */
   font-size: 1rem;
   color: #333;
   padding: 0 10px;           /* Optional: padding for smaller screens */
@@ -79,7 +79,7 @@
   }
 
   .platform-card {
-    width: 120px;
+    width: 160px;
   }
 
   .platform-card img {
