@@ -1,22 +1,72 @@
+.center-text {
+  text-align: center;        /* Center the text */
+  max-width: 600px;          /* Limit the width */
+  margin: 0 auto;            /* Center the block horizontally */
+  line-height: 1.9;          /* Better readability */
+  font-size: 1rem;
+  color: #333;
+  padding: 0 10px;           /* Optional: padding for smaller screens */
+
+  
+}
+
+
+
+
+
+
+
+.platforms-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.platforms-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.platforms-section p {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.platforms-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
 .platform-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
   background: #fff;
-  padding: 30px 20px;       /* increased vertical padding for height */
+  padding: 15px 20px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
   width: 140px;
-  min-height: 220px;        /* optional: ensures a minimum height */
   transition: transform 0.3s, box-shadow 0.3s;
+
+
+
+  padding: 30px 20px;       /* increased vertical padding for height */
+  min-height: 220px;
+
+
+  
 }
 
 .platform-card img {
   width: 80px;
   height: 80px;
   object-fit: contain;
-  margin-bottom: 15px;      /* slightly more space for taller card */
+  margin-bottom: 10px;
 }
 
 .platform-card span {
@@ -26,17 +76,23 @@
   text-align: center;
 }
 
-/* Responsive adjustments */
+.platform-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+  .platforms-container {
+    gap: 20px;
+  }
+
   .platform-card {
     width: 160px;
-    padding: 25px 15px;     /* adjust padding for smaller screens */
-    min-height: 200px;
   }
 
   .platform-card img {
     width: 60px;
     height: 60px;
-    margin-bottom: 12px;
   }
 }
