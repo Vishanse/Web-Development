@@ -76,10 +76,28 @@ section.step.reverse {
   font-weight: 500;
 }
 
-.btn:hover {
-  background: #4b6ef5;
-  color: white;
+
+
+
+
+.btn:hover,
+.btn:focus {
+  background-color: #0056b3; /* darker blue */
+  color: #ffffff;
+  outline: none; /* optional: keep visible focus */
+  box-shadow: 0 0 0 3px rgba(0,123,255,0.5);
 }
+
+
+
+
+
+
+
+
+
+
+
 
 .image {
   flex: 1;
