@@ -1,89 +1,71 @@
-.center-text {
-  text-align: center;        /* Center the text */
-  max-width: 600px;          /* Limit the width */
-  margin: 0 auto;            /* Center the block horizontally */
-  line-height: 1.9;          /* Better readability */
-  font-size: 1rem;
-  color: #333;
-  padding: 0 10px;           /* Optional: padding for smaller screens */
-}
-
-
-
-
-
-
-
-
-.platforms-section {
-  text-align: center;
-  padding: 50px 20px;
-  background-color: #f9f9f9;
-}
-
-.platforms-section h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-  color: #111;
-}
-
-.platforms-section p {
-  font-size: 1rem;
-  margin-bottom: 40px;
-  color: #555;
-}
-
-.platforms-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
+/* Dynamic card size */
 .platform-card {
+  flex: 0 1 calc(20% - 30px); /* 20% width minus gap for spacing */
+  padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
   background: #fff;
-  padding: 15px 20px;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  width: 140px;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.platform-card img {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  margin-bottom: 10px;
+/* Icon scaling */
+.platform-card i {
+  font-size: 5vw; /* scales with viewport width */
+  max-font-size: 5rem; /* optional: cap maximum size */
+  margin-bottom: 1rem;
 }
 
+/* Text scaling */
 .platform-card span {
-  font-size: 1rem;
+  font-size: 1.2vw; /* scales with viewport */
   font-weight: 600;
   color: #111;
   text-align: center;
+  max-font-size: 1.2rem; /* cap for readability */
 }
 
+/* Hover effect */
 .platform-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .platforms-container {
-    gap: 20px;
-  }
-
+/* Responsive adjustments */
+@media (max-width: 1024px) {
   .platform-card {
-    width: 160px;
+    flex: 0 1 calc(30% - 20px); /* fewer cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .platform-card {
+    flex: 0 1 calc(45% - 15px); /* 2 cards per row */
+    padding: 1.5rem 1rem;
   }
 
-  .platform-card img {
-    width: 60px;
-    height: 60px;
+  .platform-card i {
+    font-size: 8vw; /* scale up for small screens */
+  }
+
+  .platform-card span {
+    font-size: 3.5vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .platform-card {
+    flex: 0 1 calc(80% - 10px); /* 1 card per row */
+  }
+
+  .platform-card i {
+    font-size: 10vw;
+  }
+
+  .platform-card span {
+    font-size: 4.5vw;
   }
 }
