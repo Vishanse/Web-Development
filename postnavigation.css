@@ -4,8 +4,11 @@
   text-decoration: none;
   color: #2962ff;
   font-weight: 600;
-  padding-left: 8px;
-  padding-right: 8px;
+  border-left: 4px solid #4f46e5;
+  padding-left: 0.6rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+ 
 }
 
 .post-navigation a:hover {
@@ -13,11 +16,5 @@
 }
 
 
-.post-navigation {
-  margin-left: 10px;   /* reduce left margin */
-  margin-right: 10px;  /* reduce right margin */
-  /* optional: reduce top/bottom spacing too */
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
+
 
