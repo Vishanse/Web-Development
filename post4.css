@@ -135,21 +135,7 @@ section.tutorial p strong::before {
     font-size: 1.7rem;
   }
 
-
-
-  .post-navigation {
-  margin-left: 10px;   /* reduce left margin */
-  margin-right: 10px;  /* reduce right margin */
-  /* optional: reduce top/bottom spacing too */
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-
-
-
-
-  
+ 
 
   section.tutorial h2 {
     font-size: 1.2rem;
