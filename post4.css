@@ -17,7 +17,7 @@ section.tutorial {
   box-shadow: none;
 
   /* Add spacing between sections */
-  padding: 2rem 0;
+  padding: 4rem 0;
 
   /* Smooth width transition */
   transition: width 0.3s ease;
