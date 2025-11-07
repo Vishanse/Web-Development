@@ -1,8 +1,14 @@
 .post-navigation {
   display: flex;
-  justify-content: space-between; /* pushes one link left, the other right */
+  justify-content: space-between;
   align-items: center;
-  margin: 20px 10px; /* optional: control top/bottom and side spacing */
+
+  /* Try larger margins to test */
+  margin: 40px 50px;   /* top/bottom: 40px, left/right: 50px */
+  padding: 10px 0;
+
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .post-navigation a {
@@ -14,7 +20,6 @@
 .post-navigation a:hover {
   text-decoration: underline;
 }
-
 
 
 
