@@ -13,3 +13,12 @@
 .post-navigation a:hover {
   text-decoration: underline;
 }
+
+
+.post-navigation {
+  margin-left: 10px;   /* reduce left margin */
+  margin-right: 10px;  /* reduce right margin */
+  /* optional: reduce top/bottom spacing too */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
