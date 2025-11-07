@@ -1,16 +1,22 @@
-
+.post-navigation {
+  display: flex;
+  justify-content: space-between; /* pushes one link left, the other right */
+  align-items: center;
+  margin: 20px 10px; /* optional: control top/bottom and side spacing */
+}
 
 .post-navigation a {
   text-decoration: none;
   color: #2962ff;
   font-weight: 600;
- 
- 
 }
 
 .post-navigation a:hover {
   text-decoration: underline;
 }
+
+
+
 
 
 
