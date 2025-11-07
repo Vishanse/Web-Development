@@ -1,6 +1,6 @@
-# Allow all bots
 User-agent: *
 Disallow:
 
+Sitemap: https://www.sitewebdevelopment.com/sitemap.xml
 
 
