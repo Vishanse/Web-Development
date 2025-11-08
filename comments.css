@@ -1,3 +1,4 @@
+/* Comment Section Container */
 .comment-section {
   max-width: 700px;
   margin: 40px auto;
@@ -5,49 +6,44 @@
   color: #222;
 }
 
+/* Section Header */
 .comment-section h3 {
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
+/* Info Text */
 .comment-section p {
   font-size: 0.95rem;
   color: #555;
+  margin-bottom: 20px;
 }
 
-textarea, input[type="text"], input[type="email"] {
+/* Commento Widget Container */
+#commento {
+  min-height: 400px;      /* ensures full widget is visible */
   width: 100%;
-  padding: 10px;
-  margin-top: 8px;
-  border: 1px solid #ddd;
-  background: #fafafa;
-  font-size: 0.95rem;
-  border-radius: 3px;
 }
 
-.comment-row {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
+/* Prevent old textarea/input styles from affecting Commento */
+.comment-section textarea,
+.comment-section input[type="text"],
+.comment-section input[type="email"] {
+  box-sizing: border-box; /* safe sizing */
 }
 
-.comment-row input {
-  flex: 1;
+/* Optional: hide Markdown helper inside Commento */
+#commento .commento-markdown-helper {
+  display: none !important;
 }
 
-button {
-  background-color: #3942ff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 0.95rem;
-  cursor: pointer;
-  border-radius: 3px;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
+/* Responsive tweaks (optional) */
+@media (max-width: 768px) {
+  .comment-section {
+    padding: 0 15px;
+  }
 }
 
-button:hover {
-  background-color: #2734e0;
-}
+
+
