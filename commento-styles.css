@@ -1,49 +1,63 @@
-/* Comment Section Container */
-.comment-section {
-  max-width: 700px;
-  margin: 40px auto;
-  font-family: "Inter", Arial, sans-serif;
-  color: #222;
-}
+/* ============================= */
+/* Custom Commento Styles for sitewebdevelopment.com */
+/* ============================= */
 
-/* Section Header */
-.comment-section h3 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-/* Info Text */
-.comment-section p {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-/* Commento Widget Container */
-#commento {
-  min-height: 400px;      /* ensures full widget is visible */
-  width: 100%;
-}
-
-/* Prevent old textarea/input styles from affecting Commento */
-.comment-section textarea,
-.comment-section input[type="text"],
-.comment-section input[type="email"] {
-  box-sizing: border-box; /* safe sizing */
-}
-
-/* Optional: hide Markdown helper inside Commento */
-#commento .commento-markdown-helper {
+/* Hide Markdown helper */
+.commento-markdown-helper {
   display: none !important;
 }
 
-/* Responsive tweaks (optional) */
-@media (max-width: 768px) {
-  .comment-section {
-    padding: 0 15px;
-  }
+/* Comment container font and colors */
+.commento-comment,
+.commento-comment-text,
+.commento-commenter-name {
+  font-family: "Inter", Arial, sans-serif;
+  color: #222;
+  font-size: 0.95rem;
 }
 
+/* Comment box background and borders */
+.commento-comment-box,
+.commento-reply-box {
+  background-color: #fafafa !important;
+  border: 1px solid #ddd !important;
+  border-radius: 3px !important;
+  padding: 10px !important;
+  width: 100% !important;
+  box-sizing: border-box;
+}
 
+/* Buttons */
+.commento-button,
+.commento-reply-button,
+.commento-cancel-button {
+  background-color: #3942ff !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 3px !important;
+  padding: 10px 20px !important;
+  font-size: 0.95rem !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease !important;
+}
 
+.commento-button:hover,
+.commento-reply-button:hover,
+.commento-cancel-button:hover {
+  background-color: #2734e0 !important;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .commento-comment-box,
+  .commento-reply-box {
+    padding: 8px !important;
+  }
+
+  .commento-button,
+  .commento-reply-button,
+  .commento-cancel-button {
+    padding: 8px 16px !important;
+    font-size: 0.9rem !important;
+  }
+}
