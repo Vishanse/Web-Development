@@ -2,10 +2,7 @@
 /* Custom Commento Styles for sitewebdevelopment.com */
 /* ============================= */
 
-/* Hide Markdown helper */
-.commento-markdown-helper {
-  display: none !important;
-}
+
 
 /* Comment container font and colors */
 .commento-comment,
