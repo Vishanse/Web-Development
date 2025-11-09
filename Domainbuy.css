@@ -81,6 +81,7 @@ section#hosting-providers {
 
 .card.horizontal .platform-card {
   display: flex;
+  flex-direction: column; /* stack items vertically */
   align-items: center;
   padding: 20px;
   text-decoration: none;
@@ -90,7 +91,7 @@ section#hosting-providers {
 
 .card.horizontal .platform-logo {
   width: 280px;
-  flex-shrink: 0;
+  height: auto;
 }
 
 .card.horizontal .text p {
