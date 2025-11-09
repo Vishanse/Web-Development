@@ -1,14 +1,4 @@
-/* ===== Comment Section Styles ===== */
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f7f8fa;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
+
 
 .comment-section {
   background: #fff;
