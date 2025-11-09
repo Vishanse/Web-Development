@@ -199,6 +199,28 @@
 
     <button type="submit">Send Comment</button>
   </form>
+
+
+
+
+<script>
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', function (e) {
+    // Let the form submit normally (to new tab)
+    // Then clear fields immediately
+    setTimeout(() => {
+      form.reset(); // clears the inputs
+    }, 100); // small delay to ensure submission happens first
+  });
+</script>
+
+
+
+
+
+
+  
 </section>
 
   
