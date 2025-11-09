@@ -207,12 +207,11 @@
     function handleSubmit(event) {
       const form = event.target;
 
-      // Wait for form submission to finish, then clear
-      // Using setTimeout ensures Formspree receives the data before reset
+      // Wait a short moment to allow submission to go through
       setTimeout(() => {
-        form.reset();
-        console.log("✅ Form cleared successfully!");
-      }, 800); // 0.8s delay
+        // Refresh the current page
+        window.location.reload();
+      }, 500); // 0.5 seconds delay ensures Formspree submission happens first
     }
   </script>
 
