@@ -206,12 +206,12 @@
 <script>
   const form = document.getElementById('contactForm');
 
-  form.addEventListener('submit', function (e) {
-    // Let the form submit normally (to new tab)
-    // Then clear fields immediately
+  form.addEventListener('submit', (e) => {
+    // Allow normal form submission first
+    // Then clear the fields
     setTimeout(() => {
-      form.reset(); // clears the inputs
-    }, 100); // small delay to ensure submission happens first
+      form.reset(); // Clears all fields
+    }, 500); // Small delay ensures the data is sent first
   });
 </script>
 
