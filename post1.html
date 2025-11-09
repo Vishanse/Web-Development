@@ -204,15 +204,16 @@
 
 
 <script>
+document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById('contactForm');
 
-  form.addEventListener('submit', (e) => {
-    // Allow normal form submission first
-    // Then clear the fields
+  form.addEventListener('submit', () => {
+    // Wait a moment to let Formspree receive the data
     setTimeout(() => {
-      form.reset(); // Clears all fields
-    }, 500); // Small delay ensures the data is sent first
+      form.reset(); // Clears all input fields
+    }, 300); // 300–500ms delay works best
   });
+});
 </script>
 
 
