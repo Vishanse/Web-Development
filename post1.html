@@ -185,7 +185,7 @@
 <section class="comment-section">
   <h2>Leave a Comment</h2>
 
-  <form action="https://formspree.io/f/xpwodljz  " method="POST" class="comment-form"   target="_blank"   <!-- Opens the thank-you page in a new tab -->>
+  <form action="https://formspree.io/f/xpwodljz  " method="POST" class="comment-form" >
     <label for="name">Name</label>
     <input type="text" id="name" name="name" required placeholder="Your name" />
 
@@ -203,17 +203,7 @@
 
 
 
-<script>
-  const form = document.getElementById('contactForm');
 
-  form.addEventListener('submit', (e) => {
-    // Allow normal form submission first
-    // Then clear the fields
-    setTimeout(() => {
-      form.reset(); // Clears all fields
-    }, 500); // Small delay ensures the data is sent first
-  });
-</script>
 
 
 
