@@ -74,6 +74,20 @@ section#hosting-providers {
   margin-bottom: 15px;
 }
 
+
+.card.vertical .text p {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+  color: #111;
+}
+
+
+
+
+
+
+
 /* ====== Horizontal Card (Squarespace) ====== */
 .card.horizontal {
   width: 400px;
