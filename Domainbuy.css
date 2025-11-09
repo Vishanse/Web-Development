@@ -11,7 +11,7 @@ body {
 /* ====== Section Styling ====== */
 section#hosting-providers {
   padding: 60px 20px;
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 /* ====== Title Styling ====== */
@@ -89,7 +89,7 @@ section#hosting-providers {
 }
 
 .card.horizontal .platform-logo {
-  width: 120px;
+  width: 180px;
   flex-shrink: 0;
 }
 
