@@ -1,61 +1,122 @@
 
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 20px;
-    }
+ /* ====== Global Styles ====== */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f9fafc;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
 
-    h2 {
-      color: #333;
-      margin-bottom: 5px;
-    }
+/* ====== Section Styling ====== */
+section#hosting-providers {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
 
-    span {
-      display: block;
-      margin-bottom: 20px;
-      color: #555;
-    }
+/* ====== Title Styling ====== */
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 40px; /* space between GitHub and Squarespace cards */
-      flex-wrap: wrap; /* makes it responsive on small screens */
-    }
+.title h2 {
+  font-size: 2em;
+  margin-bottom: 8px;
+  color: #111;
+}
 
-    .card {
-      width: 220px;
-      padding: 20px;
-      background: white;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+.title span {
+  color: #555;
+  font-size: 1rem;
+}
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-    }
+/* ====== Container Layout ====== */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
 
-    .card img {
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
-      margin-bottom: 10px;
-    }
+/* ====== Card Base ====== */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
 
-    .card p {
-      font-weight: bold;
-      color: #333;
-      margin: 0;
-    }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
 
-    .title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+/* ====== Vertical Card (GitHub) ====== */
+.card.vertical {
+  width: 220px;
+  text-align: center;
+}
 
+.card.vertical .platform-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card.vertical .platform-logo {
+  width: 80px;
+  margin-bottom: 15px;
+}
+
+/* ====== Horizontal Card (Squarespace) ====== */
+.card.horizontal {
+  width: 400px;
+}
+
+.card.horizontal .platform-card {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  gap: 20px;
+}
+
+.card.horizontal .platform-logo {
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.card.horizontal .text p {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+  color: #111;
+}
+
+.card.horizontal .text span {
+  color: #555;
+  font-size: 0.95em;
+}
+
+/* ====== Responsive Design ====== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card.horizontal {
+    width: 90%;
+  }
+
+  .card.vertical {
+    width: 70%;
+  }
+}
