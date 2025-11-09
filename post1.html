@@ -204,19 +204,16 @@
 
 
 <script>
-    // Make sure the script runs after the DOM is loaded
-    window.addEventListener('load', () => {
-      const form = document.getElementById('contactForm');
+    function handleSubmit(event) {
+      const form = event.target;
 
-      form.addEventListener('submit', (e) => {
-        // Allow Formspree to submit normally
-        // Then clear the fields after a short delay
-        setTimeout(() => {
-          form.reset();
-          console.log("Form cleared!");
-        }, 1000); // delay ensures data is sent before reset
-      });
-    });
+      // Wait for form submission to finish, then clear
+      // Using setTimeout ensures Formspree receives the data before reset
+      setTimeout(() => {
+        form.reset();
+        console.log("✅ Form cleared successfully!");
+      }, 800); // 0.8s delay
+    }
   </script>
 
 
