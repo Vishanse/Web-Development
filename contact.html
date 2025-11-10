@@ -125,12 +125,16 @@
 
 
 
-   <script>
+  <script>
 const form = document.getElementById("contact-form");
 const success = document.getElementById("success-message");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+
+  // Open Formspree in a new window
+  window.open(form.action, "_blank");
+
   const data = new FormData(form);
   const response = await fetch(form.action, {
     method: "POST",
@@ -142,7 +146,7 @@ form.addEventListener("submit", async (e) => {
     success.style.display = "block";
     form.reset();
 
-    // 🔁 Hard refresh by adding timestamp
+    // Hard refresh after 2 seconds
     setTimeout(() => {
       window.location.href = "contact.html?ts=" + new Date().getTime();
     }, 2000);
