@@ -172,12 +172,18 @@
 
 
 
-<form id="contactForm" action="/server/api/submit" method="POST">
-  <form id="contactForm" action="https://api.silentforms.com/forms/762f2f3765c788d58e087b2aad22a0b0880ab1c43cb3ad53809967421df8f681/submissions" method="POST">
 
 
-  <!-- Replace with your actual Access Key -->
-  <input type="hidden" name="accessKey" value="762f2f3765c788d58e087b2aad22a0b0880ab1c43cb3ad53809967421df8f681 ">
+
+
+
+
+<form id="contactForm" 
+      action="https://api.silentforms.com/forms/762f2f3765c788d58e087b2aad22a0b0880ab1c43cb3ad53809967421df8f681/submissions" 
+      method="POST">
+
+  <!-- SilentForms Access Key -->
+  <input type="hidden" name="accessKey" value="762f2f3765c788d58e087b2aad22a0b0880ab1c43cb3ad53809967421df8f681">
 
   <!-- Name Field -->
   <div class="form-group">
@@ -197,7 +203,7 @@
     <textarea id="message" name="message" rows="4" required></textarea>
   </div>
 
-  <!-- Honeypot Spam Protection (hidden) -->
+  <!-- Honeypot Spam Protection -->
   <input type="text" name="honeypot" style="display:none">
 
   <!-- Optional: Webhook URL -->
@@ -207,17 +213,13 @@
 
 </form>
 
-
 <script>
 async function submitForm(event) {
-  event.preventDefault(); // Prevent default form submission
+  event.preventDefault();
 
   const form = event.target;
   const formData = new FormData(form);
   const data = Object.fromEntries(formData.entries());
-
-  // Add your access key (replace with your actual key)
-  data.accessKey = 'YOUR_ACCESS_KEY_HERE';
 
   try {
     const response = await fetch(form.action, {
@@ -233,7 +235,7 @@ async function submitForm(event) {
 
     if (result.status === 'success') {
       console.log('Form submitted successfully!', result);
-      form.reset(); // Clear the form
+      form.reset();
       alert('✅ Form submitted successfully!');
     } else {
       console.error('Form submission failed:', result);
@@ -246,7 +248,6 @@ async function submitForm(event) {
   }
 }
 
-// Attach the handler to your form
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', submitForm);
@@ -265,9 +266,10 @@ if (contactForm) {
 
 
 
+
+
+
   
-
-
 
 <!-- Floating Social Media Window -->
 <div class="floating-share">
