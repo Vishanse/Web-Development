@@ -125,16 +125,17 @@
 
 
 
-  <script>
+<script>
 const form = document.getElementById("contact-form");
 const success = document.getElementById("success-message");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  // Open Formspree in a new window
+  // 1️⃣ Open Formspree in a new window
   window.open(form.action, "_blank");
 
+  // 2️⃣ Collect form data and send via fetch (AJAX)
   const data = new FormData(form);
   const response = await fetch(form.action, {
     method: "POST",
@@ -142,19 +143,25 @@ form.addEventListener("submit", async (e) => {
     headers: { Accept: "application/json" }
   });
 
+  // 3️⃣ Handle response
   if (response.ok) {
+    // Show success message
     success.style.display = "block";
+
+    // 4️⃣ Clear the form
     form.reset();
 
-    // Hard refresh after 2 seconds
+    // Optional: hard refresh after 2 seconds (comment out if not needed)
     setTimeout(() => {
       window.location.href = "contact.html?ts=" + new Date().getTime();
     }, 2000);
+
   } else {
     alert("❌ There was an issue sending your message. Please try again.");
   }
 });
 </script>
+
 
 
 
