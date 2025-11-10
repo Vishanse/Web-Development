@@ -124,34 +124,34 @@
 
 
 
-<div id="success-message">✅ Message sent! Reloading...</div>
 
-  <script>
-    const form = document.getElementById("contact-form");
-    const success = document.getElementById("success-message");
+   <script>
+const form = document.getElementById("contact-form");
+const success = document.getElementById("success-message");
 
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const data = new FormData(form);
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: data,
-        headers: { Accept: "application/json" }
-      });
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const data = new FormData(form);
+  const response = await fetch(form.action, {
+    method: "POST",
+    body: data,
+    headers: { Accept: "application/json" }
+  });
 
-      if (response.ok) {
-        success.style.display = "block";
-        form.reset();
+  if (response.ok) {
+    success.style.display = "block";
+    form.reset();
 
-        // 🔁 Hard refresh after 2 seconds
-        setTimeout(() => {
-          window.location.reload(true);
-        }, 2000);
-      } else {
-        alert("❌ There was an issue sending your message. Please try again.");
-      }
-    });
-  </script>
+    // 🔁 Hard refresh by adding timestamp
+    setTimeout(() => {
+      window.location.href = "contact.html?ts=" + new Date().getTime();
+    }, 2000);
+  } else {
+    alert("❌ There was an issue sending your message. Please try again.");
+  }
+});
+</script>
+
 
 
 
