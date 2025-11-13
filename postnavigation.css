@@ -21,7 +21,16 @@
   text-decoration: underline;
 }
 
+/* align sides */
+.nav-previous {
+  margin-right: auto;
+  text-align: left;
+}
 
+.nav-next {
+  margin-left: auto;
+  text-align: right;
+}
 
 
 
