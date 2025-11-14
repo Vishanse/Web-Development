@@ -115,8 +115,8 @@
 
 
   
-  <h1>How to Add a Squarespace Domain to GitHub Pages</h1>
-<p> Learn how to link your Squarespace domain to your GitHub Pages website. This step-by-step guide makes it easy to host your site on GitHub while keeping your custom domain active, without downtime or complex configurations.     </p>
+  <h1>Steps to connect Squarespace Domain to GitHub Pages</h1>
+<p>Connect your squarespace purchased domain to GitHub hosting repository by changing dns settings in squarespace dashboard. </p>
 
 
 
@@ -140,32 +140,21 @@
 
   
   
+  <p> STEPS</p>
+ <p> 1: Go to squarespace.com and click Domains.
+ <p> 2: Select your purchased domain ( eg: sitewebdevelopment.com)
+ <p> 3: Click DNS ><li> Delete squarespace default record.</li>
+                    <li>Keep these records,<strong>Squarespace Domain Connect </strong>record and <strong>Email security  </strong>record.
+  <p> 4:Click <strong>Add Record  </strong> button.
+    <p> Insert <li> Host-@, Type-A, TTL- 4hrs, Data- 185.199.108.153</li>
+               <li> Host-@, Type-A, TTL- 4hrs, Data- 185.199.109.153</li>
+               <li> Host-@, Type-A, TTL- 4hrs, Data- 185.199.110.153</li>
+               <li> Host-@, Type-A, TTL- 4hrs, Data- 185.199.111.153</li>
+               <li> Host-www, Type-CNAME, TTL- 4hrs, Data- username.github.io</li>
 
-  <p><strong>Step 1:</strong> Log in to your Squarespace account and go to <strong>Settings → Domains</strong>. Select the domain you want to connect to GitHub Pages.</p>
+  <p> image</p>
 
-  <p><strong>Step 2:</strong> Find the <strong>DNS settings</strong> for your domain.</p>
-
-  <p><strong>Step 3:</strong> Add the following DNS records to point your domain to GitHub Pages:</p>
-
-  <ul>
-    <li><strong>A Records:</strong> Point to GitHub Pages IP addresses:
-      <ul>
-        <li>185.199.108.153</li>
-        <li>185.199.109.153</li>
-        <li>185.199.110.153</li>
-        <li>185.199.111.153</li>
-      </ul>
-    </li>
-    <li><strong>CNAME Record:</strong> If using a subdomain (like <code>www.yourdomain.com</code>), point it to <code>yourusername.github.io</code>.</li>
-  </ul>
-
-  <p><strong>Step 4:</strong> In your GitHub repository, create a file named <code>CNAME</code> in the root (same as <code>index.html</code>) and add your full domain (e.g., <code>www.yourdomain.com</code>) inside it. Save and push the file.</p>
-
-  <p><strong>Step 5:</strong> Wait for DNS propagation (usually a few minutes to a few hours). Then open your domain in a browser — it should point to your GitHub Pages site.</p>
-
-  <p><em>Screenshot placeholder: Squarespace DNS settings and GitHub Pages CNAME file</em></p>
-
-  <p><strong>Tip:</strong> Make sure there are no conflicting DNS records (like old forwarding rules) that could prevent your domain from pointing to GitHub Pages.</p>
+  
 
 
 
