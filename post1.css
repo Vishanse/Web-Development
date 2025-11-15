@@ -117,7 +117,7 @@ section.tutorial p em {
 
 /* === Tip Highlight === */
 section.tutorial p strong::before {
-  content: "💡 ";
+  content: " 👉";
   color: #facc15;
   display: inline-block;
   margin-right: 0.2em;
