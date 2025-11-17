@@ -115,6 +115,24 @@
 &lt;/urlset&gt;</code></pre>
 
 
+
+
+  <button class="copy-btn" onclick="copyCode()">Copy</button>
+</pre>
+
+<script>
+function copyCode() {
+  // Get the text content from the code block
+  const code = document.querySelector('#codeBlock code').innerText;
+
+  // Copy to clipboard
+  navigator.clipboard.writeText(code).then(() => {
+    alert('Code copied to clipboard!');
+  }).catch(err => {
+    alert('Failed to copy: ' + err);
+  });
+}
+</script>
   
 
 
