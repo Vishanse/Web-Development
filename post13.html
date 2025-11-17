@@ -148,11 +148,57 @@ function copyCode() {
 </script>
   
 
-<p> Note: <ul>
-  <li>Replace:<strong>www.yourdomain.com, page, image.jpg, title and caption </strong>with your website's credintials </li>
+
+  
+<p> Note: If your videos are hosted somewhere like YouTube, then replace the below with the above code. <ul>
+  <li> </li></ul></p>
+
+<pre id="codeBlock"><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"&gt;
+
+  &lt;url&gt;
+    &lt;loc&gt;https://www.yourdomain.com/page&lt;/loc&gt;
+
+    &lt;video:video&gt;
+      &lt;video:title&gt;Your YouTube Video Title&lt;/video:title&gt;
+      &lt;video:description&gt;Your YouTube video description here.&lt;/video:description&gt;
+      &lt;video:thumbnail_loc&gt;https://i.ytimg.com/vi/VIDEO_ID/maxresdefault.jpg&lt;/video:thumbnail_loc&gt;
+
+      &lt;video:player_loc&gt;https://www.youtube.com/embed/VIDEO_ID&lt;/video:player_loc&gt;
+      &lt;video:content_loc&gt;https://www.youtube.com/watch?v=VIDEO_ID&lt;/video:content_loc&gt;
+
+      &lt;video:duration&gt;120&lt;/video:duration&gt;
+      &lt;video:publication_date&gt;2025-01-15T12:00:00+00:00&lt;/video:publication_date&gt;
+    &lt;/video:video&gt;
+
+  &lt;/url&gt;
+
+&lt;/urlset&gt;</code></pre>
 
 
-</ul></p>
+
+ <button class="copy-btn" onclick="copyCode()">Copy</button>
+</pre>
+
+<script>
+function copyCode() {
+  // Get the text content from the code block
+  const code = document.querySelector('#codeBlock code').innerText;
+
+  // Copy to clipboard
+  navigator.clipboard.writeText(code).then(() => {
+    alert('Code copied to clipboard!');
+  }).catch(err => {
+    alert('Failed to copy: ' + err);
+  });
+}
+</script>
+
+
+  
+
+
 
 
 
