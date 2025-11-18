@@ -4,8 +4,8 @@
 }
 
 .video-tutorial iframe {
-  width: 90%;
-  max-width: 700px;
+  width: 95%;
+  max-width: 900px;
   height: 400px;
   border-radius: 8px;
 }
@@ -13,3 +13,12 @@
 
  /* Add spacing between sections */
   padding: 6rem 0;
+
+
+
+/* === Responsive === */
+@media (max-width: 900px) {
+  section.tutorial {
+    width: 95%;
+    padding: 1.5rem 0;
+  }
