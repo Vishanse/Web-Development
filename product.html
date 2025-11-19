@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Services</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #f2f4f8;
+        color: #333;
+    }
+
+    /* Header / Hero Section */
+    .hero {
+        background: linear-gradient(135deg, #0f1624, #1b2436);
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+    }
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+    .hero p {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+        margin-top: -50px;
+    }
+
+    /* Cards */
+    .card {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+        transition: 0.3s;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    .pricing-item {
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+        font-size: 18px;
+    }
+
+    .calculator input {
+        padding: 10px;
+        width: 80px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        margin-left: 10px;
+    }
+
+    .calculator button {
+        background: #1b2436;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 8px;
+        margin-top: 10px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+    .calculator button:hover {
+        background: #27324a;
+    }
+
+    .result {
+        margin-top: 15px;
+        font-size: 24px;
+        font-weight: 600;
+        color: #1b2436;
+    }
+
+    /* PayPal Button Area */
+    .paypal-box a {
+        background: #0070ba;
+        color: white;
+        padding: 14px 25px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 18px;
+        display: inline-block;
+        margin-top: 10px;
+        transition: 0.3s;
+    }
+    .paypal-box a:hover {
+        background: #005d99;
+    }
+
+    .contact-text {
+        margin-top: 12px;
+        font-size: 14px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 25px;
+        margin-top: 30px;
+        color: #777;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <h1>Professional Design Services</h1>
+    <p>Logos • YouTube Thumbnails • Webpages — High Quality Design at Fixed Prices</p>
+</section>
+
+<div class="container">
+
+    <!-- PRICING CARD -->
+    <div class="card">
+        <h2>Pricing</h2>
+
+        <div class="pricing-item">🎨 YouTube Thumbnail — <strong>$50</strong></div>
+        <div class="pricing-item">🖋️ Logo Design — <strong>$50</strong></div>
+        <div class="pricing-item">💻 One Webpage — <strong>$60</strong></div>
+        <div class="pricing-item">💻 Two Webpages — <strong>$120</strong></div>
+    </div>
+
+    <!-- CALCULATOR CARD -->
+    <div class="card calculator">
+        <h2>Webpage Price Calculator</h2>
+        <label>Number of Webpages:
+            <input type="number" id="pages" min="1" value="1">
+        </label><br>
+        <button onclick="calculateCost()">Calculate Price</button>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <!-- PAYPAL PAYMENT CARD -->
+    <div class="card paypal-box">
+        <h2>Pay Now</h2>
+
+        <!-- Replace LINK with your PayPal.me link -->
+        <a href="https://www.paypal.me/YOUR-LINK" target="_blank">Pay with PayPal</a>
+
+        <p class="contact-text">
+            After payment, please send your project details + payment screenshot to:  
+            <strong>your-email@example.com</strong>
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    © 2025 Your Design Brand — All Rights Reserved
+</footer>
+
+<script>
+function calculateCost() {
+    const pages = parseInt(document.getElementById("pages").value);
+    let cost = 0;
+
+    if (pages <= 0) {
+        document.getElementById("result").innerHTML = "Please enter a valid number.";
+        return;
+    }
+
+    if (pages === 1) cost = 60;
+    else if (pages === 2) cost = 120;
+    else cost = pages * 60;
+
+    document.getElementById("result").innerHTML = "Total Cost: $" + cost;
+}
+</script>
+
+</body>
+</html>
