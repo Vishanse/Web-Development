@@ -64,3 +64,20 @@
     height: 160px;
   }
 }
+
+
+
+/* Smaller card when there is no image */
+.blog-card.no-image {
+  padding-top: 10px;
+}
+
+/* Reduce spacing for text-only cards */
+.blog-card.no-image h3 {
+  margin: 12px 15px;
+}
+
+/* Prevent empty image space */
+.blog-card.no-image img {
+  display: none;
+}
